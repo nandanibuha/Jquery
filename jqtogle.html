@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOGGLE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>    
+<script>    
+$(document).ready(function(){    
+    $("#jq").click(function(){    
+        $("div.d1").toggle(2000);
+        $(".d1").css("color","gray")
+    });  
+    $("#js").click(function(){    
+        $("div.d2").toggle(2000);
+        $(".d2").css("color","navy")
+    });    
+});    
+</script> 
+<style>
+    .d1{
+        font-size: 2.5vh;
+        font-style: italic;
+        font-family: cursive;
+        border: 3px solid black;
+        padding: 15px;
+        margin-top: 15px;
+    }
+    .d2{
+        font-size: 2.5vh;
+        font-style: italic;
+        font-family: cursive;
+        border: 3px solid black;
+        padding: 15px;
+        margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+    <button id="jq">JQUERY</button>
+<div class="d1">    
+<p><b>jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. It is free, open-source software using the permissive MIT License.As of May 2019, jQuery is used by 73% of the 10 million most popular websites.Web analysis indicates that it is the most widely deployed JavaScript library by a large margin, having at least 3 to 4 times more usage than any other JavaScript library
+</p>     
+</div>    
+<hr>
+<button id="js">JAVASCRIPT</button>    
+<div class="d2">    
+<p><b>JavaScript often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.[11] As of 2022, 98% of websites use JavaScript on the client side for webpage behavior,[12] often incorporating third-party libraries.[13] All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+
+    JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[14] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+</p>     
+</div>    
+</body>
+</html>   

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>div style and duration in hide / show</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (){            
+            $("#hide").click(function () {
+                $("#p1").toggle(1000);
+                $("#p2").hide(1000);
+                $(this).attr("disabled", true);
+                $("#show").attr("disabled", false);
+                $("#H1").text("CSS");
+            });
+            $("#show").click(function () {
+                $("#p2").show(1000);
+                $("#p1").hide(2000);
+                $(this).attr("disabled", true);
+                $("#show").attr("disabled", false);
+                $("#H1").text("HTML");
+            });
+            $("#H1").click(function () {
+                ($(this).text() == "Hide")
+                    ? ($(this).text("CSS"), $("#hide").attr("disabled", true), $("#show").attr("disabled", false))
+                    : ($(this).text("HTML"), $("#hide").attr("disabled", false), $("#show").attr("disabled", true));
+
+
+            })
+            $("#BtnPlus").click(function () {
+                var MDHW = parseInt($("#p1").css("height"));
+                if (MDHW <= 500) {
+                    MDHW += 10;
+                    $("#p1").css("height", MDHW);
+                    $("#p1").css("width", MDHW);
+                    $("#p2").css("height", MDHW);
+                    $("#p2").css("width", MDHW);
+                }
+                else {
+                    alert("More 500px is not possible.");
+                }
+            });
+            $("#BtnMinus").click(function () {
+                var MDHW = parseInt($("#p1").css("height"));
+                if (MDHW >= 20) {
+                    MDHW -= 10;
+                    $("#p1").css("height", MDHW);
+                    $("#p1").css("width", MDHW);
+                    $("#p2").css("height", MDHW);
+                    $("#p2").css("width", MDHW);
+                }
+                else {
+                    alert("Less 20px is not possible.");
+                }
+            });
+        });    
+    </script>
+    <style>
+        #p1 {
+            height: 400px;
+            width: 400px;
+            background-color: aqua;
+            text-align: center;
+            display: none;
+        }
+
+        #p2 {
+            height: 300px;
+            width: 300px;
+            background-color: rgb(128, 71, 102);
+            display: none;
+            text-align: center;
+            margin-left: 45px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="p1"> HTML </div>
+    <div id="p2"> CSS </div>
+    <button id="hide">HTML</button>
+    <hr>
+    <button id="show">CSS</button>
+    <hr>
+    <button id="H1">HTML / CSS </button>
+    <hr>
+    <br>
+    <button id="BtnPlus" style="font-size:xx-large;"><b>+</b></button>&nbsp;&nbsp;<button id="BtnMinus"
+        style="font-size:xx-large;"><b>-</b></button>
+</body>
+
+</html>

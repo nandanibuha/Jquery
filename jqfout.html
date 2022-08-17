@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FADE OUT</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script>  
+$(document).ready(function(){  
+    $("button").click(function(){  
+        $("#div1").fadeOut();  
+        $("#div2").fadeOut("slow");  
+        $("#div3").fadeOut(3000);
+        $("#div4").fadeOut(4500);  
+    });  
+});  
+</script>  
+<style>
+    #div1{
+        background-color: blanchedalmond;
+        height: 50px;
+        width: 200px;
+    }
+    #div2{
+        background-color: blanchedalmond;
+        height: 50px;
+        width: 300px;
+    }
+    #div3{
+        background-color: blanchedalmond;
+        height: 50px;
+        width: 400px;
+    }
+    #div4{
+        background-color: blanchedalmond;
+        height: 50px;
+        width: 500px;
+    }
+    body{
+        font-size: 2.5vh;
+        text-align: center;
+    }
+</style>
+</head>
+<body> 
+<button>Click</button><br><br>  
+<div id="div1">HTML</div><br>  
+<div id="div2">CSS</div><br>  
+<div id="div3">JS</div><br>
+<div id="div4">JQ</div>
+</body>
+</html>

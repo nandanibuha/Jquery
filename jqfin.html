@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FADE IN</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+                $("#div4").fadeIn(3000);
+                $("#div5").fadeIn(3000);
+                $("#div6").fadeIn(3000);
+
+            });
+        });  
+    </script>
+    <style>
+        #div1 {
+            height: 50px;
+            width: 350px;
+            margin-left: 35px;
+            background-color: orange;
+            display: none;
+        }
+
+        #div2 {
+            background: url("ashokchakra.png");
+            background-repeat: no-repeat;
+            height: 50px;
+            display: none;
+            margin-left: 180px;
+        }
+
+        #div3 {
+            height: 50px;
+            width: 350px;
+            margin-left: 35px;
+            background-color: lawngreen;
+            display: none;
+        }
+
+        #div4 {
+            height: 400px;
+            width: 15px;
+            background-color: rgb(93, 43, 7);
+            display: none;
+            margin-left: 42px;
+        }
+
+        #div5 {
+            height: 20px;
+            width: 60px;
+            background-color: rgb(93, 43, 7);
+            margin-left: 20px;
+            display: none;
+        }
+
+        #div6 {
+            height: 20px;
+            width: 100px;
+            background-color: rgb(93, 43, 7);
+            display: none;
+        }
+
+        #MAIN {
+            margin-left: 100px;
+        }
+
+        #div7 {
+            position: absolute;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>CLICK TO HAR GHAR TIRANGA</button><br><br>
+    <div id="MAIN">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+        <div id="div5"></div>
+        <div id="div6"></div>
+        <div id="div7">
+            <p>
+                Independence Day is celebrated annually on 15 August as a national holiday in India commemorating the
+                nation's independence from the United Kingdom on 15 August 1947, the day when the provisions of the 1947
+                Indian Independence Act, which transferred legislative sovereignty to the Indian Constituent Assembly,
+                came into effect. India retained King George VI as head of state until its transition to a republic,
+                when the nation adopted the Constitution of India on 26 January 1950 (celebrated as Indian Republic Day)
+                and replaced the dominion prefix, Dominion of India, with the enactment of the sovereign law
+                Constitution of India. India attained independence following the Independence Movement noted for largely
+                non-violent resistance and civil disobedience.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
